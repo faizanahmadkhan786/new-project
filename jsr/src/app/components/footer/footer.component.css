@@ -1,0 +1,47 @@
+.Area{
+    background: black;
+    padding:4% 0%;
+}
+.Area h4{
+color: white;
+}
+h4{
+    border-left: 5px solid white;
+    padding: 0px 0px 0px 5px;
+}
+p{
+    color: aqua;
+}
+.Area ul li{
+    color: aqua;
+    list-style: none;
+}
+#last{
+    color:aqua;
+    text-align: center;
+}
+#last{
+    text-align: center;
+    color: aqua;
+}
+#last1 {
+    padding: 20px;
+    
+    position: relative;
+  }
+  
+  .text-carousel {  /* Added the missing period (.) before text-carousel */
+    position: absolute;
+    white-space: nowrap;
+    animation: carousel 5s infinite;
+  }
+  
+  @keyframes carousel {
+    0%,100% {
+      transform: translateX(100%);
+    }
+    25%, 75%{
+      transform: translateX(0%);
+    }
+  }
+  

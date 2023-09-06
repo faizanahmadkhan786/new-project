@@ -1,0 +1,42 @@
+.home p{
+    text-align: center;
+    padding-top: 10px;
+    color: aqua;
+}
+.home{
+    background: black;
+    
+}
+/* Style the header section */
+.head {
+    background-color: #566c85; /* Header background color */
+    color: #5ecece; /* Text color */
+    padding: 20px 0; /* Add padding for spacing */
+  }
+  
+  
+ 
+  
+  /* Style the headings */
+  .head h1 {
+    font-size: 2.5rem; /* Adjust the font size as desired */
+    margin: 5px 0;
+    text-shadow: 10px 10px 6px rgba(53, 51, 51, 0.5);
+  }
+  
+  .head h4 {
+    font-size: 1.2rem; /* Adjust the font size as desired */
+    font-weight: normal; /* Remove bold style */
+    margin: 0;
+  }
+  /* Apply a transparent box with a shadow and set the image as the background */
+.image-box {
+  background-color: #566c85; /* Transparent white background */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Shadow properties */
+  width: 100px; /* Set the width of the box */
+  height: 100px; /* Set the height of the box */
+  background-image: url('../../components/../../assets/images/jhlogo.png'); /* Set the image as the background */
+  background-size: cover; /* Cover the entire box with the image */
+  background-position: center; /* Center the image within the box */
+  border-radius: 50%;
+}
