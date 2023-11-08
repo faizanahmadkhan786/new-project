@@ -156,13 +156,267 @@
                 <h4>Examination</h4>
             </div>
         </div>
+        <button (click)="hs()">{{button}}</button>
+
         <div class="row">
-            <div class="col">
+            <div class="col" *ngIf="status">
+                <!-- <button (click)="hs()">Show</button> -->
+                <!-- <button (click)="increment()">increment</button> -->
+                <!-- <button (click)="myfun()">{{button}}</button> -->
+
+
+
                 <p>The examination and certification of the selected and admitted candidates are done by Jharkhand
                     University of Technology(JUT), Ranchi, Jharkhand. At present, semester system. Minimum 75%
                     attendance of the students is necessary for appearing at their Board Examinations conducted by
                     Jharkhand University of Technology(JUT), Ranchi, Jharkhand.</p>
             </div>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-primary" role="alert"
+                    *ngIf="isstatus; else elseStatement" >
+                       
+                        A simple primary alert—check it out!
+                      </div>
+                      <ng-template #elseStatement>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                          </div>
+                          
+                      </ng-template>
+                </div>
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div *ngIf="ischeck; then truepart else falsePart">
+                        welcome User !
+                       
+                        A simple primary alert—check it out!
+                      </div>
+                      <ng-template #truepart>
+                        <div class="alert alert-secondary" role="alert">
+                           suceesfully registerred
+                          </div>
+                          </ng-template>
+                          <ng-template #falsePart>
+                            <div class="alert alert-secondary" role="alert">
+                               something Wrong
+                              </div>
+                              </ng-template>
+
+                </div>
         </div>
     </div>
-  
+</div>
+<!-- <section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                First Member={{namee[1]}}
+                First Member={{namee[1]}}
+                First Member={{namee[1]}}
+
+            </div> -->
+            <!-- <div class="row">
+                <div class="col">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                        <tr *ngFor="let data of namee">
+                        <td>{{data}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li *ngFor="let data of namee">{{data}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table>
+                       <tr>
+                        <tbody>
+                            <th *ngFor="let data of product">{{data}}</th>
+
+                        </tbody>
+                       </tr>
+                       <tr>
+                        <tbody>
+                        <td *ngFor="let data of company">{{data}}</td>
+                        </tbody>
+                       </tr>
+                    
+                        
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>Roll No</th>
+                        </tr>
+                        <tr *ngFor="let student of students">
+                            <td>{{student.sid}}</td>
+                            <td>{{student.name}}</td>
+                            <td>{{student.branch}}</td>
+                            <td>{{student.roll}}</td>
+                       </tr>
+                       </table>
+                 </div>
+
+            
+    </div>
+</div>
+</div>
+</section>
+</section>
+<section> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table-bordered">
+                     <tr>
+                       
+                        <th>id</th>
+                        <th>BoardRoll</th>
+                        <th>Name</th>
+                        <th>Comapny</th>
+                       
+                     </tr>
+                     <tbody>
+                        <tr *ngFor="let datas of placement.current.mechanical">
+                            <td>{{datas.id}}</td>
+                            <td>{{datas.BoardRoll}}</td>
+                            <td>{{datas.Name}}</td>
+                            <td>{{datas.Company}}</td>
+                         </tr>
+                     </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- <p>{{price | currency:'INR'}}</p>
+                <p>{{result | currency:'INR'}}</p>
+                <p>{{price| currency:'INR':'code'}}</p>
+                <p>{{price | currency:'CAD':'symbol'}}</p> -->
+                <!-- <p>{{result |currency:'CAD':'symbol-narrow'}}</p>
+                <p>{{result |currency:'INR':'symbol-narrow'}}</p>
+                <p>{{result | currency:'Dollar':'Kuwait Dinar'}}</p>
+                <p>{{result |currency:'INR':'symbol':'4.2-2'}}</p>
+                <p>{{result |currency:'INR':'symbol':'3.1-1'}}</p> -->
+                <!-- {{ result | currency:'EUR':'symbol':'3.2-2':'fr' }} -->
+
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>{{result}}</p>
+                <p>A: {{result | percent}}</p>
+                <p>{{result | currency:'INR'}}</p>
+                <p>{{ decimal_value | number }} </p>
+                <p>{{ decimal_value | number:'1.0-6' }}  </p>
+                <p>{{decimal_value | number:'4.5-5':'fr'}}</p>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- <section>
+    <div class="container">
+        <div class="row">
+            <div class="col" ngIf="status">
+                <button (click)="fun()">Hide</button>
+                <h1>Aafaque</h1>
+            </div>
+        </div>
+    </div>
+</section>
+   -->
+   <section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>NOTICE</h1>
+            </div>
+        </div><div class="row" *ngFor="let notice of notices">
+            <div class="col">
+                <p>{{notice.title}}</p>
+            </div>
+            <div class="col">
+                <p>{{notice.date}}</p>
+            </div>
+            <div class="col">
+                <p>{{notice.notice}}</p>
+            </div>
+            <div class="col">
+                <p>{{notice.new}}</p>
+            </div>
+            <div class="col">
+                <p>{{notice.home}}</p>
+            </div> 
+            
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Sheet</h1>
+                <p>{{sheets}}</p>
+                <p>Enter your google Form</p>
+                <p>{{form}}</p>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table border="1">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                    <tr>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                        <td>{{fake}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

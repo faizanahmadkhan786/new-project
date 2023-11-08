@@ -1,4 +1,5 @@
 <app-header></app-header>
+<app-nav></app-nav>
 <!--<section></section>
   
 <app-header></app-header>
@@ -9,17 +10,49 @@
 
   <nav>
   <ul>
-    <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+    <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <fa-icon [icon]="faHome"></fa-icon>Home</a></li>
     <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
     <li><a routerLink="/addmision" routerLinkActive="active" ariaCurrentWhenActive="page">Admission</a></li>
     <li><a routerLink="/footer" routerLinkActive="active" ariaCurrentWhenActive="page">footer</a></li>
     <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">about</a></li>
     <li><a routerLink="/header" routerLinkActive="active" ariaCurrentWhenActive="page">header</a></li>
     <li><a routerLink="/testing" routerLinkActive="active" ariaCurrentWhenActive="page">testing</a></li>
+    <li><a routerLink="/notice" routerLinkActive="active" ariaCurrentWhenActive="page">notice</a></li>
+
+    <fa-icon [icon]="faCoffee"></fa-icon>
+   
+    <fa-icon [icon]="faContactBook"></fa-icon>
+    
+
+    
 
 
   </ul>
 </nav>
+<!-- <p>{{ 'welcomeMessage' | translate: user }}</p>
+<input type="password" placeholder="{{ 'login.password' | translate }}">
+<label translate='login.username'></label>
+<p translate [translateParams]="{ firstName: user.firstName }">welcomeMessage</p> -->
+
+
+<section>
+  <div class="container">
+      <div class="row">
+          <div class="row">
+              <div class="col">
+                  <button (click)="useLanguage('hi')">Hindi</button>
+                  <button (click)="useLanguage('en')">en</button>
+              </div>
+          </div>
+          <div class="col">
+              <h2>{{"about.heading" | translate}}</h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+<youtube-player videoId="dPaZNGRcPK4"></youtube-player>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 

@@ -1,0 +1,31 @@
+[
+    {
+        "sid":1,
+        "name":"Aditi Singh",
+        "branch":"Computer Sc. & Engineering",
+        "roll":1,
+        "photo":"aditi.jpg"
+    },
+    {
+        "sid":2,
+        "name":"Nishu Kumari",
+        "branch":"Computer Sc. & Engineering",
+        "roll":2,
+        "photo":"nishu.jpg"
+    },
+    {
+        "sid":3,
+        "name":"Nishu Kumari",
+        "branch":"Computer Sc. & Engineering",
+        "roll":2,
+        "photo":"nishu.jpg"
+    },
+    {
+        "sid":3,
+        "name":"Nishu Kumari",
+        "branch":"Computer Sc. & Engineering",
+        "roll":2,
+        "photo":"nishu.jpg"
+    }
+   
+]

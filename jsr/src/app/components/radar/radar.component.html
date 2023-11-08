@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <canvas
+  baseChart
+  class="chart"
+  [data]="radarChartData"
+  [options]="radarChartOptions"
+  [type]="radarChartType"
+>
+</canvas>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <canvas
+  baseChart
+  class="chart"
+  [data]="polarAreaChartData"
+  [legend]="polarAreaLegend"
+  [type]="polarAreaChartType"
+>
+</canvas>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <canvas
+  baseChart
+  class="chart"
+  [data]="scatterChartData"
+  [options]="scatterChartOptions"
+  [type]="scatterChartType"
+>
+</canvas>
+</section>

@@ -15,6 +15,8 @@ ngOnInit()
   console.log(this.status);
   console.log(this.name);
 }
-
+fun(){
+  this.status=false;
+}
 }
 
