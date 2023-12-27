@@ -1,0 +1,15 @@
+<section class="body">
+    <div class="row">
+        <div class="col-md-6 col-md-12">
+            <!-- search-bar.component.html -->
+<div class="search-container">
+    <p>{{today | date:'fullDate'}}</p>
+
+    <input type="text" class="search-input" placeholder="Pick Point" [(ngModel)]="pickPoint">
+    <input type="text" class="search-input" placeholder="Destination Point" [(ngModel)]="destinationPoint">
+    <button class="search-button" (click)="searchTrain()">Search Train</button>
+  </div>
+  
+        </div>
+    </div>
+</section>

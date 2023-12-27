@@ -1,0 +1,30 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Typography */
+
+
+.box {
+  background: #fff; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Spacing */
+.box {
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* Buttons */
+.box .mat-stroked-button {
+  border: 1px solid #007bff; 
+  background: #007bff;
+  color: #fff;
+  line-height: 54px;
+  transition: background 0.3s ease-in-out; 
+}
+
+.box .mat-stroked-button:hover {
+  background: #0056b3; 
+}

@@ -1,0 +1,65 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Typography */
+body {
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+  background-image: url('../../../assets/images/gettyimages-1479179967-612x612.jpg');
+}
+
+/* Colors */
+/* body {
+  background: #e2e2e2;
+} */
+
+.box {
+  background: #ffffff; /* Use white background */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for a lifted effect */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition effects */
+}
+
+/* Spacing */
+.box {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center; /* Center align content */
+}
+
+/* Buttons */
+.box .mat-stroked-button {
+  border: 2px solid #007bff; /* Slightly thicker border for the button */
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out; /* Add transition effect */
+}
+
+.box .mat-stroked-button:hover {
+  background: #0056b3; /* Darker shade on hover */
+}
+
+/* Card Header */
+.login-wrapper mat-card-header {
+  
+  color: black; /* Header text color */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.login-wrapper mat-card-header mat-card-title {
+  font-size: 30px;
+  margin: 0;
+}
+
+/* Card Content */
+.login-wrapper .mat-card {
+  padding: 20px;
+}
+
+/* Animation */
+.box:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Add a deeper shadow on hover */
+}
