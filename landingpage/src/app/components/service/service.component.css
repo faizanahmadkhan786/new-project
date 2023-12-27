@@ -1,0 +1,12 @@
+#service{
+      margin-bottom: 10%;
+      margin-top: 5%;
+        /* border-radius: 50%; */
+        /* background-color: antiquewhite; */
+}
+#title {
+    text-align: center;
+    top: 10%;
+    color:rgb(192, 187, 187);
+    font-family: 'Open Sans', sans-serif;
+}

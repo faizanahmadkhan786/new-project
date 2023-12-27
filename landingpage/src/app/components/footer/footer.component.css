@@ -1,0 +1,39 @@
+.Area{
+    background-color: #014B40;
+    color: #FFFFFF;
+    padding: 40px 0px;
+}
+.Area h4{
+color: #FFFFFF;
+}
+.Area ul li{
+    font-family: 'Poppins', sans-serif;
+}
+#plant h4{
+    font-family: 'Prosto One', cursive;
+    font-size: 15px;
+
+}
+#plant{
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+}
+.Area h5{
+    font-family: 'Open Sans', sans-serif;
+}
+.Area li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.Area ul li{
+    list-style-type: none;
+   }
+.Area h5{
+   
+    margin-left: 20px;
+}
+#join h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
