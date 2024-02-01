@@ -1,13 +1,76 @@
 
 <!-- <app-register></app-register>
 <app-login></app-login> -->
-<ul>
-    <li><a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page">register</a></li>
-    <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">login</a></li>
-    <li><a routerLink="/bookticket" routerLinkActive="active" ariaCurrentWhenActive="page">search</a></li>
-    <li><a routerLink="psnger-dtls" routerLinkActive="active" ariaCurrentWhenActive="page">prsnl-info</a></li>
-
-
+<!-- <ul> -->
+    <!-- <li><a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page">register</a></li> -->
+    <!-- <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">login</a></li> -->
+    <!-- <li><a routerLink="/bookticket" routerLinkActive="active" ariaCurrentWhenActive="page">search</a></li> -->
+    <!-- <li><a routerLink="/prsnldtls" routerLinkActive="active" ariaCurrentWhenActive="page">Personel Details</a></li> -->
     
+    
+<!-- </ul> -->
+
+
+
+
+
+
+
+
+
+
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+	<li [ngbNavItem]="1">
+		<button ngbNavLink>Register</button>
+		<ng-template ngbNavContent>
+			<p>
+                <a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page">register</a>
+			</p>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="2">
+		<button ngbNavLink>Login</button>
+		<ng-template ngbNavContent>
+			<p>
+    
+                <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">login</a>
+
+			</p>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="3">
+		<button ngbNavLink>Book </button>
+		<ng-template ngbNavContent>
+			<p>
+                <a routerLink="/bookticket" routerLinkActive="active" ariaCurrentWhenActive="page">search</a>
+
+			</p>
+		</ng-template>
+	</li>
+    <li [ngbNavItem]="4">
+		<button ngbNavLink>Personal</button>
+		<ng-template ngbNavContent>
+			<p>
+                <a routerLink="/prsnldtls" routerLinkActive="active" ariaCurrentWhenActive="page">Personel Details</a>
+
+			</p>
+		</ng-template>
+	</li>
 </ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+<li><a routerLink="/footer" routerLinkActive="active" ariaCurrentWhenActive="page">footer</a></li>
+
+<pre>Active: {{ active }}</pre>
+
+
+
+
+
+
+
+
+
+
 <router-outlet></router-outlet>

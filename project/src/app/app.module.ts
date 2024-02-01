@@ -9,21 +9,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookticketComponent } from './components/bookticket/bookticket.component';
 
 import { CustomMaterialModule } from './custom-material.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown, NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-
-
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {NativeDateAdapter} from '@angular/material/core';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import {MatTabsModule} from '@angular/material/tabs';
+import { PrsnldtlsComponent } from './components/prsnldtls/prsnldtls.component';
+import { FooterComponent } from './components/footer/footer.component';
+// import {  ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent,BookticketComponent], // Include LoginComponent only once
+  declarations: [AppComponent, LoginComponent, RegisterComponent,BookticketComponent,PrsnldtlsComponent,FooterComponent,], // Include LoginComponent only once
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -36,6 +41,12 @@ import { MatStepperModule } from '@angular/material/stepper';
     ReactiveFormsModule,
     MatSelectModule,
     MatStepperModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatTabsModule,
+    NgbDropdownModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent],

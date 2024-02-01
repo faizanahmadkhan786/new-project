@@ -2,14 +2,46 @@
     <div class="row">
         <div class="col-md-6 col-md-12">
             <!-- search-bar.component.html -->
-<div class="search-container">
-    <p>{{today | date:'fullDate'}}</p>
+            <div class="search-container">
+                <p>{{ today | date : "fullDate" }}</p>
+                <div class="col">
 
-    <input type="text" class="search-input" placeholder="Pick Point" [(ngModel)]="pickPoint">
-    <input type="text" class="search-input" placeholder="Destination Point" [(ngModel)]="destinationPoint">
-    <button class="search-button" (click)="searchTrain()">Search Train</button>
-  </div>
-  
+                    <input type="text" class="search-input" placeholder="Pick Point" [(ngModel)]="pickPoint" />
+                </div>
+
+                <div class="col">
+                    <input type="text" class="search-input" placeholder="Destination Point"
+                        [(ngModel)]="destinationPoint" />
+
+                    <button class="search-button" (click)="searchTrain()">Search Train</button>
+                </div>
+                <div class="col">
+                    <form>
+
+                        <mat-form-field>
+                            <mat-label>Class</mat-label>
+                            <mat-select [(ngModel)]="selectedValue" name="food">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">{{ food.viewValue
+                                    }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <p>Selected class: {{ selectedValue }}</p>
+                    </form>
+                </div>
+
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <button mat-raised-button (click)="picker.open()">Open</button>
+                </div>
+            </div>
+
         </div>
     </div>
-</section>
+    <section>
+
+    </section>

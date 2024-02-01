@@ -1,0 +1,162 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <mat-tab-group>
+                    <mat-tab label="First"> <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+                        <mat-card class="box">
+                          <mat-card-header>
+                            <mat-card-title>Log in</mat-card-title>
+                          </mat-card-header>
+                          <form class="example-form">
+                            <mat-card-content>
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Username/phone">
+                              </mat-form-field>
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Password">
+                              </mat-form-field>
+                            </mat-card-content>
+                            <button mat-stroked-button color="accent" class="btn-block">Login</button>
+                          </form>
+                        </mat-card>
+                      </div></mat-tab>
+                    <mat-tab label="Second"> <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+                        <mat-card class="box">
+                          <mat-card-header>
+                            <mat-card-title>Register</mat-card-title>
+                          </mat-card-header>
+                      <form class="example-form">
+                      <mat-card-content>
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Username">
+                              </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Email">
+                              </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Password">
+                              </mat-form-field>
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Enter phone Number">
+                              </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                                <mat-label>Choose a role...</mat-label>
+                                <mat-select>
+                                  <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                      </mat-card-content>
+                      <button mat-stroked-button color="accent" class="btn-block">Register</button>
+                      </form>
+                        </mat-card>
+                      </div> </mat-tab>
+                    <mat-tab label="Third"> 
+                      <div class="form-container">
+                        <form [formGroup]="registerform" (ngSubmit)="registerSubmit()">
+                            <div class="row g-0">
+                                <div class="col text-center p-2 mb-2 bg-light">
+                                    <span class="fs-3">Personel Details</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="Firstname" class="form-label">Firstname</label>
+                                    <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="LastName" class="form-label">lastname</label>
+                                    <input type="text" class="form-control" id="lastName" formControlName="LastName">
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="Email" class="form-label">Enter Email</label>
+                                        <input type="email" class="form-control" id="email" formControlName="email">
+                                    </div>
+                    
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div ngbDropdown class="d-inline-block">
+                                        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                                            Toggle dropdown
+                                        </button>
+                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                            <button ngbDropdownItem>Action - 1</button>
+                                            <button ngbDropdownItem>Another Action</button>
+                                            <button ngbDropdownItem>Something else is here</button>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col ps-3 mb-3">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>D.O.B</mat-label>
+                                        <input matInput [matDatepicker]="picker">
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                    <button mat-raised-button (click)="picker.open()">Open</button>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col ps-3 mb-3">
+                                        
+                                <select class="form-control" name="country" id="country">
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+                               </select>
+
+                                    </div>
+                                </div>
+
+                                 <div class="row">
+                                <div class="col  ps-3 mb-3" >
+                                    <label for="mobile" class="form-label">Enter Ph Number</label>
+                                    <input type="text" class="form-control" id="mobile" formControlName="mobile">
+                                </div>
+                                <div class="col ps-3 mb-3">
+                                    <div class="m-1">Gender</div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="m" id="male" formControlName="Gender">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="f" id="female" formControlName="Gender">
+                                        <label class="form-check-label" for="Female">Female</label>
+                                    </div>
+                    
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col ps-3 mb-3">
+                               
+                                <label class="form-lebel" for="pswd">password</label>
+                                <input type="password" class="form-control"  id="pswd" formControlName="pswd">
+                             </div>
+                             <div class="col ps-3 mb-3">
+                                <label class="form-lebel" for="rpswd">Repeat Pswd</label>
+                                <input type="password" class="form-control"  id="rpswd" formControlName="rpswd">
+                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 offset-3">
+                                <div class="d-grid">
+                                    <button type="submit" class=" btn btn-primary"> submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        </form>
+                      </div>
+                    </mat-tab>
+                  </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+  
+</section>
